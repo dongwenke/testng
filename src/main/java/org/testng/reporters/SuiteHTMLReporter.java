@@ -94,7 +94,7 @@ public class SuiteHTMLReporter implements IReporter {
 
     StringBuffer sb = new StringBuffer("<html>");
 
-    sb.append("<head><title>").append("testng.xml for ")
+    sb.append("<head>\n<meta charset='utf-8'>\n<title>").append("testng.xml for ")
       .append(xmlSuite.getName()).append("</title></head><body><tt>")
       .append(content)
       .append("</tt></body></html>");
@@ -109,7 +109,7 @@ public class SuiteHTMLReporter implements IReporter {
   private void generateIndex(List<ISuite> suites) {
     StringBuffer sb = new StringBuffer();
     String title = "Test results";
-    sb.append("<html>\n<head><title>" + title + "</title>")
+    sb.append("<html>\n<head>\n<meta charset='utf-8'>\n<title>" + title + "</title>")
       .append(HtmlHelper.getCssString("."))
       .append("</head><body>\n")
       .append("<h2><p align='center'>").append(title).append("</p></h2>\n")
@@ -538,7 +538,7 @@ public class SuiteHTMLReporter implements IReporter {
 
   private void generateIndex(XmlSuite xmlSuite, ISuite sr) {
     StringBuffer index = new StringBuffer()
-    .append("<html><head><title>Results for " + sr.getName() + "</title></head>\n")
+    .append("<html><head>\n<meta charset='utf-8'>\n<title>Results for " + sr.getName() + "</title></head>\n")
     .append("<frameset cols=\"26%,74%\">\n")
     .append("<frame src=\"toc.html\" name=\"navFrame\">\n")
     .append("<frame src=\"main.html\" name=\"mainFrame\">\n")
@@ -555,7 +555,7 @@ public class SuiteHTMLReporter implements IReporter {
 
   private void generateMain(XmlSuite xmlSuite, ISuite sr) {
     StringBuffer index = new StringBuffer()
-    .append("<html><head><title>Results for " + sr.getName() + "</title></head>\n")
+    .append("<html><head>\n<meta charset='utf-8'>\n<title>Results for " + sr.getName() + "</title></head>\n")
     .append("<body>Select a result on the left-hand pane.</body>")
     .append("</html>\n")
     ;
@@ -591,7 +591,7 @@ public class SuiteHTMLReporter implements IReporter {
     String name = "Results for " + suite.getName();
     tableOfContents
         .append("<html>\n")
-        .append("<head>\n")
+        .append("<head>\n\n<meta charset='utf-8'>\n")
         .append("<title>" + name + "</title>\n")
         .append(HtmlHelper.getCssString())
         .append("</head>\n")

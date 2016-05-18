@@ -260,7 +260,7 @@ public class TestHTMLReporter extends TestListenerAdapter {
   {
     try (PrintWriter writer = new PrintWriter(Utils.openWriter(outputDirectory, getOutputFile(testContext)))) {
 
-      writer.append("<html>\n<head>\n")
+      writer.append("<html>\n<head>\n<meta charset='utf-8'>\n")
               .append("<title>TestNG:  ").append(testContext.getName()).append("</title>\n")
               .append(HtmlHelper.getCssString())
               .append(HEAD)

@@ -75,7 +75,7 @@ public class EmailableReporter2 implements IReporter {
 
     protected void writeHead() {
         writer.print("<head>");
-        writer.print("<title>TestNG Report</title>");
+        writer.print("<title>TestNG Report</title>\n<meta charset=\"utf-8\">\n");
         writeStylesheet();
         writer.print("</head>");
     }
